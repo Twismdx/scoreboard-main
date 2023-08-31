@@ -1,9 +1,9 @@
 import React from 'react'
 import '../home.css'
-import {useGlobalContext} from './Context'
+import { useGlobalContext } from './Context'
 
 const SvgTeam = () => {
-	const {stats} = useGlobalContext()
+	const { stats } = useGlobalContext()
 	const adj = new Array(stats[0])
 	const calculateScore = (data, type) =>
 		Object.values(data).reduce(
@@ -26,6 +26,7 @@ const SvgTeam = () => {
 			0
 		)
 	const framesLeft = calculateFrames(adj)
+
 	return (
 		<svg
 			id='Layer_1'
@@ -271,4 +272,4 @@ const SvgTeam = () => {
 // {stats[0].homeframepointsadj===0 && stats[0].homescorepoints===0 ? stats[0].homescore : `${homeScore}`}
 // {stats[0].homescorepoints>0 ? `${stats[0].homescore}` : ''}
 // {stats[0].awayscorepoints>0 ? `${stats[0].awayscore}` : ''}
-export {SvgTeam}
+export { SvgTeam }
